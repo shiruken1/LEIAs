@@ -29,11 +29,11 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-        $this->app->singleton('App\Services\ResponseInterface', function ($app) {
-            return new \App\Services\ResponseService;
-        });
-
         if ($this->app->environment() == 'local') {
+	        $this->app->singleton('App\Services\ResponseInterface', function ($app) {
+	            return new \App\Services\ResponseService;
+	        });
+
             $this->app->register('Laralib\L5scaffold\GeneratorsServiceProvider');
         }
 	}
