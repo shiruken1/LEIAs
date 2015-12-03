@@ -27,7 +27,7 @@ return [
     'edit_role' => 'Edit Role',
     'edit_user' => 'Edit User',
     'general' => 'General',
-    'header_buttons' => [
+    'user_header_buttons' => [
         'permissions' => [
             'all' => 'All Permissions',
             'button' => 'Permissions',
@@ -55,6 +55,11 @@ return [
     'role_management' => 'Role Management',
     'user_management' => 'User Management',
     'access_management' => 'Access Management',
+
+    'categories' => 'Categories',
+    'category_create' => 'Create',
+    'available_categories' => 'Available Categories',
+    'category_management' => 'Category Management',
     'language-picker' => [
         'language' => 'Language',
         'langs' => [

@@ -15,7 +15,7 @@
 @stop
 
 @section('content')
-    @include('backend.access.includes.partials.header-buttons')
+    @include('backend.access.includes.partials.user_header-buttons')
 
     <table class="table table-striped table-bordered table-hover">
         <thead>
