@@ -21,7 +21,7 @@
 @stop
 
 @section('content')
-    @include('backend.access.includes.partials.header-buttons')
+    @include('backend.access.includes.partials.user_header-buttons')
 
     {!! Form::open(['route' => ['admin.access.user.change-password', $user->id], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post']) !!}
 

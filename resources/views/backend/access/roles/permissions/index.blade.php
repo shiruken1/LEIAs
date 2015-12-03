@@ -22,7 +22,7 @@
 @stop
 
 @section('content')
-    @include('backend.access.includes.partials.header-buttons')
+    @include('backend.access.includes.partials.user_header-buttons')
 
     <div>
         <!-- Nav tabs -->

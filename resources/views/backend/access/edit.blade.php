@@ -16,7 +16,7 @@
 @stop
 
 @section('content')
-    @include('backend.access.includes.partials.header-buttons')
+    @include('backend.access.includes.partials.user_header-buttons')
 
     {!! Form::model($user, ['route' => ['admin.access.users.update', $user->id], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH']) !!}
 

@@ -18,7 +18,7 @@
 
 @section('content')
 
-    @include('backend.access.includes.partials.header-buttons')
+    @include('backend.access.includes.partials.user_header-buttons')
 
     {!! Form::model($group, ['route' => ['admin.access.roles.permission-group.update', $group->id], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'patch']) !!}
 
