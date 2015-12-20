@@ -27,7 +27,7 @@
                 @endauth
 
                 @permission('view-access-management')
-                  <li class="{{ Active::pattern('admin/categories/*') }}"><a href="{!!url('admin/categories')!!}"><span>{{ trans('menus.categories') }}</span></a></li>
+                  <li class="{{ Active::pattern('admin/categories*') }}"><a href="{!!url('admin/categories')!!}"><span>{{ trans('menus.categories.management') }}</span></a></li>
                 @endauth
 
                  <li class="{{ Active::pattern('admin/log-viewer*') }} treeview">

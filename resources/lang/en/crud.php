@@ -36,6 +36,10 @@ return [
         'total' => 'role(s) total',
         'sort' => 'Sort',
     ],
+    'categories' => [
+        'none' => 'Not a sub-category',
+        'empty' => 'There are no categories yet.',
+    ],    
     'users' => [
         'confirmed' => 'Confirmed',
         'created' => 'Created',

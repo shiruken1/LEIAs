@@ -56,10 +56,16 @@ return [
     'user_management' => 'User Management',
     'access_management' => 'Access Management',
 
-    'categories' => 'Categories',
-    'category_create' => 'Create',
-    'available_categories' => 'Available Categories',
-    'category_management' => 'Category Management',
+    'categories' => [
+                        'all' => 'All Categories',
+                        'name' => 'Categories',
+                        'button' => 'Categories',
+                        'new' => 'New Category',
+                        'edit' => 'Edit Category',
+                        'available' => 'Available Categories',
+                        'management' => 'Categories',
+                    ],
+
     'language-picker' => [
         'language' => 'Language',
         'langs' => [

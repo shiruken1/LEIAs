@@ -15,7 +15,7 @@ class CategoryController extends Controller {
 	 */
 	public function index()
 	{
-		$categories = Category::orderBy('id', 'desc')->paginate(10);
+		$categories = Category::all()->groupBy('subcat_id');
 
 		return view('backend.categories.index', compact('categories'));
 	}
@@ -27,7 +27,9 @@ class CategoryController extends Controller {
 	 */
 	public function create()
 	{
-		return view('backend.categories.create');
+		$categories = Category::all()->groupBy('subcat_id');
+
+		return view('backend.categories.create', compact('categories'));
 	}
 
 	/**
@@ -45,7 +47,7 @@ class CategoryController extends Controller {
 
 		$category->save();
 
-		return redirect()->route('backend.categories.index')->with('message', 'Item created successfully.');
+		return redirect()->route('admin.categories.index')->with('message', 'Item created successfully.');
 	}
 
 	/**
@@ -70,8 +72,9 @@ class CategoryController extends Controller {
 	public function edit($id)
 	{
 		$category = Category::findOrFail($id);
+		$categories = Category::all()->groupBy('subcat_id');
 
-		return view('backend.categories.edit', compact('category'));
+		return view('backend.categories.edit', ['category' => $category, 'categories' => $categories]);
 	}
 
 	/**
@@ -90,7 +93,7 @@ class CategoryController extends Controller {
 
 		$category->save();
 
-		return redirect()->route('backend.categories.index')->with('message', 'Item updated successfully.');
+		return redirect()->route('admin.categories.index')->with('message', 'Item updated successfully.');
 	}
 
 	/**
@@ -104,7 +107,7 @@ class CategoryController extends Controller {
 		$category = Category::findOrFail($id);
 		$category->delete();
 
-		return redirect()->route('backend.categories.index')->with('message', 'Item deleted successfully.');
+		return redirect()->route('admin.categories.index')->with('message', 'Item deleted successfully.');
 	}
 
 }
